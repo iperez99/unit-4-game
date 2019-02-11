@@ -50,7 +50,7 @@ var getRandom = function (min, max) {
 
 var startGame = function () {
     //resets the score to reach//
-    var reachScore = 0;
+    playerScore = 0;
 
     //creates a new score to reach (between 21 and 123)//
     reachScore = getRandom(21, 123);
@@ -71,7 +71,7 @@ var startGame = function () {
 
 //when player clicks on the crystal a number value gets attached to the crystal and displays the score totals//
 
-var addValue = function(crystal){
+var addValue = function(crystal) {
 
     //this changes the player score//
     playerScore = playerScore + crystal.value;
@@ -85,21 +85,39 @@ var addValue = function(crystal){
     console.log("player score" + playerScore);
 
 }
- // this checks if the player has won or lost//
-var winCheck  = function () {
+// this checks if the player has won or lost//
+var winCheck = function() {
 
-    if(playerScore > reachScore){
-        
+    if (playerScore > reachScore) {
+
         alert("Sorry, please try again :(");
+        //adds a loss to the "Losses" counter//
+        losses++;
 
+        //this JQUERY code writes the loss to HTML document//
 
-        console.log("loss")
+        $("#losses").html(losses);
+
+        console.log("loss");
+        //function call to restart the game//
+        startGame();
     }
-    
-    else if(playerScore === reachScore) {
-        alert("You are awesome, you won!")
 
-        console.log("win")
+    else if (playerScore == reachScore) {
+
+        alert("You are awesome, you won!");
+
+        wins++;
+
+        //this JQUERY code writes the win to HTML document//
+
+        $("#wins").html(wins);
+
+
+        console.log("win");
+
+        //function call to restart the game//
+        startGame();
     }
 }
 
@@ -126,6 +144,8 @@ $("#btn").click(function () {
 
 //Function call to start the game//
 startGame();
+
+
 
 
 
