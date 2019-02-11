@@ -53,16 +53,13 @@ var startGame = function () {
     playerScore = 0;
 
     //creates a new score to reach (between 21 and 123)//
-    reachScore = getRandom(21, 123);
+    reachScore = getRandom(19, 120);
 
     //This creates different values for each crystal//
-    crystal.diamond.value = getRandom(1, 13);
-    crystal.emerald.value = getRandom(1, 13);
-    crystal.ruby.value = getRandom(1, 13);
-    crystal.sapphire.value = getRandom(1, 13);
-
-    console.log("target score " + reachScore);
-    console.log("Diamond: " + crystal.diamond.value + "| Emerald: " + crystal.emerald.value + " | Ruby: " + crystal.ruby.value + " | Sapphire: " + crystal.sapphire.value);
+    crystal.diamond.value = getRandom(1, 12);
+    crystal.emerald.value = getRandom(1, 12);
+    crystal.ruby.value = getRandom(1, 12);
+    crystal.sapphire.value = getRandom(1, 12);
 
     //JQUERY - Injects to HTML file the player score and the score to reach//
     $("#reachScore").html(reachScore);
@@ -82,8 +79,6 @@ var addValue = function (crystal) {
     //Call of the winCheck function//
     winCheck();
 
-    console.log("player score" + playerScore);
-
 }
 // this checks if the player has won or lost//
 var winCheck = function () {
@@ -97,7 +92,7 @@ var winCheck = function () {
 
         $("#losses").html(losses);
         alert("Sorry, please try again :(");
-        console.log("loss");
+        
         //function call to restart the game//
         startGame();
     }
@@ -112,8 +107,6 @@ var winCheck = function () {
 
         $("#wins").html(wins);
         alert("You are awesome, you won!");
-
-        console.log("win");
 
         //function call to restart the game//
         startGame();
