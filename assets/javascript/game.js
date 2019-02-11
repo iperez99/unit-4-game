@@ -71,7 +71,7 @@ var startGame = function () {
 
 //when player clicks on the crystal a number value gets attached to the crystal and displays the score totals//
 
-var addValue = function(crystal) {
+var addValue = function (crystal) {
 
     //this changes the player score//
     playerScore = playerScore + crystal.value;
@@ -86,18 +86,17 @@ var addValue = function(crystal) {
 
 }
 // this checks if the player has won or lost//
-var winCheck = function() {
+var winCheck = function () {
 
     if (playerScore > reachScore) {
 
-        alert("Sorry, please try again :(");
         //adds a loss to the "Losses" counter//
         losses++;
 
         //this JQUERY code writes the loss to HTML document//
 
         $("#losses").html(losses);
-
+        alert("Sorry, please try again :(");
         console.log("loss");
         //function call to restart the game//
         startGame();
@@ -105,14 +104,14 @@ var winCheck = function() {
 
     else if (playerScore == reachScore) {
 
-        alert("You are awesome, you won!");
+
 
         wins++;
 
         //this JQUERY code writes the win to HTML document//
 
         $("#wins").html(wins);
-
+        alert("You are awesome, you won!");
 
         console.log("win");
 
