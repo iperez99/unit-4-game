@@ -1,0 +1,12 @@
+.jumbotron{
+    background-image: url("../images/diamond_upholstery.png");
+}
+
+body{
+    background-image: url("../images/congruent_pentagon.png");
+    background-repeat: repeat;
+}
+
+footer {
+    position: fixed;
+}

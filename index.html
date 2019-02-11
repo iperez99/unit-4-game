@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Collector</title>
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Crystal collector header title -->
+        <div class="jumbotron">
+
+            <div class="container">
+                <h1 class="text-center">Crystal Collector Game!</h1>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="row">
+
+        <div class="col-md-12 text-center">
+            <button type="button" id="btn" class="btn btn-info">Instructions</button>
+        </div>
+
+    </div>
+
+    <div class="container my-5">
+        <div class="card instructions ">
+            <ol>
+                <li>
+                    You will be given a random number at the start of the game.
+                </li>
+
+                <li>
+                    There are 4 crystals below. By clicking on a crystal you will add a specific amount of points to
+                    your total score.
+                </li>
+
+                <li>
+                    You win the game by matching your total score to the random number, you lose if your game total
+                    score goes above the random number.
+                </li>
+
+                <li>
+                    The value of each crystal is hidden from you until you click on it.
+                </li>
+                <br>
+                <p id="hint">Hint: Each time the game starts, the crystals will be assigned a new number!
+                </p>
+            </ol>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <!-- Target Score -->
+            <div class="col-lg-3">
+
+                <div class="card card-primary">
+
+                    <div class="card-header">
+                        <h3 class="card-title text-center">Reach this Score</h3>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">80</h3>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Player Score -->
+            <div class="col-lg-3">
+
+                <div class="card card-primary">
+
+                    <div class="card-header">
+                        <h3 class="card-title text-center">Your Score</h3>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">80</h3>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+
+                <div class="card card-primary">
+
+                    <div class="card-header">
+                        <h3 class="card-title text-center">Crystal Selection</h3>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="assets/images/diamond.png" alt="">
+                        <img src="assets/images/emerald.png" alt="">
+                        <img src="assets/images/ruby.png" alt="">
+                        <img src="assets/images/sapphire.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Win and Loses counters -->
+        <div class="row">
+            <div class="col-lg-6">
+
+                <div class="card card-primary">
+
+                    <div class="card-header bg-success">
+                        <h3 class="card-title text-center">Wins</h3>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">0</h3>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-lg-6">
+
+                <div class="card card-primary">
+
+                    <div class="card-header bg-danger">
+                        <h3 class="card-title text-center">Losses</h3>
+                    </div>
+                    <div class="card-body">
+                        <h3 class="text-center">0</h3>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Footer -->
+    <div class="row">
+        <div class="container">
+            <footer class="col-md-12 text-center footer">
+                Created by: Ismael Alexis Perez &copy;Copyright 2019
+            </footer>
+        </div>
+
+    </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js"
+        integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+        integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+        crossorigin="anonymous"></script>
+    <!-- JQuery Library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- Local Javascript -->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+
+</body>
+
+</html>
+
+
